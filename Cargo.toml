@@ -1,6 +1,6 @@
 [package]
 name = "filelock-rs"
-version = "0.1.0-beta.1"
+version = "0.1.0-beta.2"
 edition = "2021"
 authors = ["Vincenzo Palazzo <vincenzopalazzodev@gmail.com>"]
 description = "Minimal Rust library that provides functionality for managing PID files and file locks."

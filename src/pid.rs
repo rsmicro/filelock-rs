@@ -88,7 +88,7 @@ impl Pid {
     pub fn new<T: Display>(path: T, name: T) -> io::Result<Self> {
         let pid = std::process::id();
         let file_path = format!("{path}/{name}.pid");
-        let mut file = std::fs::File::open(file_path.clone())?;
+        let mut file = std::fs::File::create(file_path.clone())?;
         file.try_lock_exclusive()?;
         file.write_all(format!("{pid}").as_bytes())?;
         Ok(Self {
